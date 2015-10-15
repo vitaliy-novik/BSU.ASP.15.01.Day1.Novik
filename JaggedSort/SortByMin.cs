@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JaggedSort
 {
-    class SortByMin : SortingMethod
+    public class SortByMin : SortingMethod
     {
         public SortByMin(bool ascend = true) : base(ascend) { }
 

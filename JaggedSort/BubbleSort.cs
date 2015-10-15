@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JaggedSort
 {
-    class BubbleSort
+    public class BubbleSort
     {
         private SortingMethod sortMeth;
 

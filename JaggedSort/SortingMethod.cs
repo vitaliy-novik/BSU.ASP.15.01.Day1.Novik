@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JaggedSort
 {
-    abstract class SortingMethod
+    public abstract class SortingMethod
     {
         protected bool ascending;
 

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI\Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewtonsMethod.MSUnitTests", "NewtonsMethod.MSUnitTests\NewtonsMethod.MSUnitTests.csproj", "{5E825094-21A2-423E-A2CD-68318243596F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewtonsMethod.NUnitTests", "NewtonsMethod.NUnitTests\NewtonsMethod.NUnitTests.csproj", "{812DB418-B6B3-4EE0-AF9C-9D618DAEA45F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{5E825094-21A2-423E-A2CD-68318243596F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E825094-21A2-423E-A2CD-68318243596F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E825094-21A2-423E-A2CD-68318243596F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{812DB418-B6B3-4EE0-AF9C-9D618DAEA45F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{812DB418-B6B3-4EE0-AF9C-9D618DAEA45F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{812DB418-B6B3-4EE0-AF9C-9D618DAEA45F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{812DB418-B6B3-4EE0-AF9C-9D618DAEA45F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

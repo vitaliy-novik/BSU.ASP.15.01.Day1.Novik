@@ -8,14 +8,18 @@ namespace NewtonsMethod
 {
     public static class NewtonRoot
     {
-        public static double Root(double basis, int pow, double precision)
+        public static double Root(double basis, int degree, double precision)
         {
+            if (basis < 0)
+                throw new ArgumentException("Basis < 0");
+            if (degree == 0)
+                return 1;
             double x1 = 1.0;
             double x2 = basis;
             while (Math.Abs(x2 - x1) > precision)
             {
                 double temp = x2;
-                x2 = ((pow - 1) * x1 + basis / Math.Pow(x1, pow - 1)) / pow;
+                x2 = ((degree - 1) * x1 + basis / Math.Pow(x1, degree - 1)) / degree;
                 x1 = temp;
             }
             return x2;

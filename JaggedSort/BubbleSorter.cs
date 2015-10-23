@@ -6,18 +6,20 @@ using System.Threading.Tasks;
 
 namespace JaggedSort
 {
-    public class BubbleSort
+    public class BubbleSorter
     {
-        private SortingMethod sortMeth;
+        public SortingMethod SortMethod { get; set; }
 
-        public BubbleSort(SortingMethod sm)
+        public BubbleSorter(SortingMethod sm)
         {
-            sortMeth = sm;
+            SortMethod = sm;
         }
 
         public void Sort(int[][] array)
         {
-            int[] alternate = sortMeth.Alternate(array);
+            if (array == null)
+                throw new ArgumentException();
+            int[] alternate = SortMethod.Alternate(array);
             for (int i = 0; i < array.Length - 1; ++i)
             {
                 for (int j = 0; j < array.Length - i - 1; ++j)

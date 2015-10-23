@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewtonsMethod.MSUnitTests",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewtonsMethod.NUnitTests", "NewtonsMethod.NUnitTests\NewtonsMethod.NUnitTests.csproj", "{812DB418-B6B3-4EE0-AF9C-9D618DAEA45F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JaggedSort.Tests", "JaggedSort.Tests\JaggedSort.Tests.csproj", "{B426EA09-591B-4CDB-9F45-7EB1D6FFF541}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{812DB418-B6B3-4EE0-AF9C-9D618DAEA45F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{812DB418-B6B3-4EE0-AF9C-9D618DAEA45F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{812DB418-B6B3-4EE0-AF9C-9D618DAEA45F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B426EA09-591B-4CDB-9F45-7EB1D6FFF541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B426EA09-591B-4CDB-9F45-7EB1D6FFF541}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B426EA09-591B-4CDB-9F45-7EB1D6FFF541}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B426EA09-591B-4CDB-9F45-7EB1D6FFF541}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

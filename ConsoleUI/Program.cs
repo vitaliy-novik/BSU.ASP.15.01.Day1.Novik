@@ -19,7 +19,7 @@ namespace ConsoleUI
             ar[0] = new int[2] { 5, 6 };
             ar[2] = new int[4] { 4, 8, 1, 5 };
             ar[4] = new int[3] { 3, 5, 9 };
-            BubbleSorter bs = new BubbleSorter(new SortBySum(false));
+            BubbleSorter bs = new BubbleSorter(new SortBySum());
             bs.Sort(ar);
             Console.Read();
         }

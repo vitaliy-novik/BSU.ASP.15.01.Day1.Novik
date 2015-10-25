@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace JaggedSort
 {
-    public class SortBySum : SortingMethod
+    public sealed class SortBySum : ISortingMethod
     {
-        public SortBySum(bool ascend = true) : base(ascend) { }
-
-        protected override int GetKey(int[] array)
+        public int GetKey(int[] array)
         {
             return array.Sum();
         }

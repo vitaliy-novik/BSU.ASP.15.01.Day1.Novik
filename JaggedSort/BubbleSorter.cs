@@ -6,35 +6,57 @@ using System.Threading.Tasks;
 
 namespace JaggedSort
 {
-    public class BubbleSorter
+    public sealed class BubbleSorter
     {
-        public SortingMethod SortMethod { get; set; }
+        public ISortingMethod SortMethod { get; set; }
+        public bool Ascending { get; set; }
 
-        public BubbleSorter(SortingMethod sm)
+        public BubbleSorter(ISortingMethod sm, bool ascend = true)
         {
             SortMethod = sm;
+            Ascending = ascend;
         }
 
         public void Sort(int[][] array)
         {
             if (array == null)
                 throw new ArgumentException();
-            int[] alternate = SortMethod.Alternate(array);
+            int[] alternate = Alternate(array);
             for (int i = 0; i < array.Length - 1; ++i)
             {
                 for (int j = 0; j < array.Length - i - 1; ++j)
                 {
                     if (alternate[j] > alternate[j + 1])
                     {
-                        int a = alternate[j];
-                        alternate[j] = alternate[j + 1];
-                        alternate[j + 1] = a;
-                        int[] ar = array[j];
-                        array[j] = array[j + 1];
-                        array[j + 1] = ar;
+                        Swap(ref alternate[j], ref alternate[j + 1]);
+                        Swap(ref array[j], ref array[j + 1]);
                     }
                 }
             }
+        }
+
+        private int[] Alternate(int[][] array)
+        {
+            int[] alternate = new int[array.Length];
+            for (int i = 0; i < array.Length; ++i)
+            {
+                if (array[i] == null)
+                {
+                    alternate[i] = int.MaxValue;
+                    continue;
+                }
+                alternate[i] = SortMethod.GetKey(array[i]);
+                if (!Ascending)
+                    alternate[i] *= -1;
+            }
+            return alternate;
+        }
+
+        private void Swap<T>(ref T a, ref T b)
+        {
+            T temp = a;
+            a = b;
+            b = temp;
         }
     }
 }

@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace JaggedSort
 {
-    public class SortByMin : SortingMethod
+    public sealed class SortByMin : ISortingMethod
     {
-        public SortByMin(bool ascend = true) : base(ascend) { }
-
-        protected override int GetKey(int[] array)
+        public int GetKey(int[] array)
         {
             return array.Min();
         }

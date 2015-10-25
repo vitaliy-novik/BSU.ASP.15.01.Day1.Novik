@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace JaggedSort
 {
-    public class SortByMax : SortingMethod
+    public sealed class SortByMax : ISortingMethod
     {
-        public SortByMax(bool ascend = true) : base(ascend) { }
-
-        protected override int GetKey(int[] array)
+        public int GetKey(int[] array)
         {
             return array.Max();
         }

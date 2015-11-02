@@ -25,22 +25,15 @@ namespace JaggedSort.Tests
             int[][] sortedBySumDescending = new int[][] {
                 new int[] { 3, 6 }, new int[] { 1, 2, 4 }, new int[] { 5 }, null, null };
 
-            BubbleSorter bs = new BubbleSorter(new SortByMin());
-            bs.Sort(actual);
+            BubbleSortDelToComp.Sort(actual, new SortByMin());
             CollectionAssert.AreEqual(actual, sortedByMin);
             
-            bs.SortMethod = new SortByMax();
-            bs.Sort(actual);
+            BubbleSortDelToComp.Sort(actual, new SortByMax());
             CollectionAssert.AreEqual(actual, sortedByMax);
 
-            bs.SortMethod = new SortBySum();
-            bs.Sort(actual);
+            BubbleSortDelToComp.Sort(actual, new SortBySum());
             CollectionAssert.AreEqual(actual, sortedBySum);
 
-            bs.SortMethod = new SortBySum();
-            bs.Ascending = false;
-            bs.Sort(actual);
-            CollectionAssert.AreEqual(actual, sortedBySumDescending);
         }
     }
 

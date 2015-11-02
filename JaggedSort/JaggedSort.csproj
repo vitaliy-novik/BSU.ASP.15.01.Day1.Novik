@@ -42,12 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BubbleSorter.cs" />
+    <Compile Include="BubbleSortCompToDel.cs" />
+    <Compile Include="BubbleSortDelToComp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SortingMethods\SortByMax.cs" />
     <Compile Include="SortingMethods\SortByMin.cs" />
     <Compile Include="SortingMethods\SortBySum.cs" />
-    <Compile Include="SortingMethods\SortingMethod.cs" />
+    <Compile Include="SortingMethods\IComparer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="keypair.snk" />

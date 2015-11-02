@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace JaggedSort
 {
-    public interface ISortingMethod
+    public interface IComparer
     {
-        int GetKey(int[] array);
+        int Compare(int[] arr1, int[] arr2);
     }
 }

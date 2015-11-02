@@ -6,11 +6,21 @@ using System.Threading.Tasks;
 
 namespace JaggedSort
 {
-    public sealed class SortBySum : ISortingMethod
+    public sealed class SortBySum : IComparer
     {
-        public int GetKey(int[] array)
+        public int Compare(int[] arr1, int[] arr2)
         {
-            return array.Sum();
+            if (arr1 == null && arr2 == null)
+                return 0;
+            if (arr1 == null && arr2 != null)
+                return 1;
+            if (arr1 != null && arr2 == null)
+                return -1;
+            int m1 = arr1.Sum();
+            int m2 = arr2.Sum();
+            if (m1 == m2)
+                return 0;
+            return m1 > m2 ? 1 : -1;
         }
     }
 }
